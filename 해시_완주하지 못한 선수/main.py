@@ -37,4 +37,4 @@ def solution(participant, completion):
         tmp -= hash(com)
 
     return dic[tmp]
-#####
+##############
