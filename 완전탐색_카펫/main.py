@@ -32,4 +32,4 @@ def solution(brown, yellow):
                 if 2 * a + 2 * b == brown + 4:
                     return [a, b]
 
-                #########
+                ############
