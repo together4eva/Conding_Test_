@@ -37,20 +37,20 @@
 # 1. crow_mask
 # 2. blue_sunglasses
 # 3. smoky_makeup
-def solution(phone_book):
-    phone_book.sort()
+def solution(clothes):
+    clothesTypeMap = {}
 
-    answer = True
+    for clothe, clothesType in clothes:
+        print(clothe)
+        print("clothesType: ", clothesType)
 
-    phone_length = len(phone_book)
+        clothesTypeMap[clothesType] = clothesTypeMap.get(clothesType, 0) + 1
 
-    for i in range(phone_length - 1):
+        print(clothesTypeMap)
 
-        if phone_book[i] == phone_book[i + 1][0:len(phone_book[i])]:
-            answer = False
+    answer = 1
+    for clothesType in clothesTypeMap:
+        answer *= (clothesTypeMap[clothesType] + 1)
 
-            break
-
-    return answer
-
+    return answer - 1
 
